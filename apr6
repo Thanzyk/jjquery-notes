@@ -1,0 +1,39 @@
+script element contains javascript to be executed
+ $(document).ready(function() {
+  });
+prepares code to be run after page has been loaded
+jquery statements start with $ - "bling"
+jquery starts with html element selected with a selector, then does something to that element
+jquery and animated.css libraries added
+use jquery to apply animated css bounce class to button elements:
+$("button").addClass("animated bounce");
+$("button") selects the element button
+then CSS classes added with .addClass("animated bounce");
+can target class with .class
+can target id attributes with #id
+animated, bounce, shake, fadeOut
+ $("button").addClass("animated bounce");
+    $(".well").addClass("animated shake");
+$("#target3").addClass("animated fadeOut");
+Now you know three ways of targeting elements: by type: $("button"), by class: $(".btn"), and by id $("#target1").
+remove classes: $("#target2").removeClass("btn-default");
+how to change css color: $("#target1").css("color", "blue");
+adjust html properties: $("button").prop("disabled", true);
+add html, completely replacing previous html: $("h3").html("<em>jQuery Playground</em>");
+.text() alters text but not tags
+.remove removes html entirely
+.appendTo() moves html elements to be appended to another element
+$("#target4").appendTo("#left-well");
+clone() makes a copy of an element
+$("#target2").clone().appendTo("#right-well");
+^function chaining puts together two jQuery functions
+parent() accesses parent element of elemented selected
+$("#left-well").parent().css("background-color", "blue")
+.children() access children elements of selected element
+$("#left-well").children().css("color", "blue")
+target nth elements: target:nth-child(n) as a css selector
+$(".target:nth-child(3)").addClass("animated bounce");
+can also target odd/even:
+$(".target:odd").addClass("animated shake");
+target entire html body element: $("body").addClass("animated fadeOut");
+
